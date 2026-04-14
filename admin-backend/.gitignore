@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# logs
+*.log
+
+# env
+.env
+.env.*
+
+# prisma generated client
+generated/
+
+# build
+dist/
+build/
+
+# misc
+coverage/
+.DS_Store
