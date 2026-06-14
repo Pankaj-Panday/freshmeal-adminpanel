@@ -81,6 +81,13 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Backend Running",
+  });
+});
+
 app.use("/api/v1/categories", categoryRoutes);
 app.use("/api/v1/products", productRoutes);
 app.use("/api/v1/auth", authRoutes);
