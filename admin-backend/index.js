@@ -94,6 +94,11 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/orders", orderRoutes);
 app.use("/api/v1/users", userRoutes);
 
+app.use((req, res, next) => {
+  console.log("REQUEST", req.method, req.originalUrl);
+  next();
+});
+
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;

@@ -36,8 +36,8 @@ export default function EditCategoryScreen({ navigation, route }: Props) {
     formState: { errors, isDirty },
   } = useForm<CategoryFormValues>({
     defaultValues: {
-      name: category.name,
-      imageUrl: category.imageUrl,
+      name: category?.name,
+      imageUrl: category?.imageUrl,
     },
   });
 

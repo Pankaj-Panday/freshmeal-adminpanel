@@ -10,7 +10,7 @@ export const fetchCategories = async (params?: PaginationParams) => {
 
 export const fetchCategoryById = async (id: string) => {
   const res = await api.get(`${ENDPOINTS.CATEGORIES}/${id}`);
-  return res.data;
+  return res.data.data;
 };
 
 export const fetchProductsByCategory = async (
