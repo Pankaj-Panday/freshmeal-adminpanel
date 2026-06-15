@@ -72,7 +72,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
-  console.log("REQUEST", req.method, req.originalUrl);
+  console.log("========== REQUEST ==========");
+  console.log("METHOD:", req.method);
+  console.log("URL:", req.originalUrl);
+  console.log("IP:", req.ip);
+  console.log("USER-AGENT:", req.headers["user-agent"]);
+  console.log("HOST:", req.headers.host);
+  console.log("=============================");
   next();
 });
 
